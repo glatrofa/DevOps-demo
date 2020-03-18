@@ -20,7 +20,9 @@ metadata:
   name: client-dp
   namespace: dev
 spec:
-  replicas: 4
+  replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: client-1-0

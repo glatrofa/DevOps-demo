@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: jenkins-svc
+  namespace: dev
   labels:
     app: jenkins-2-204-5
 spec:
@@ -17,8 +18,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins-dp
+  namespace: dev
 spec:
   replicas: 1
+  strategy:
+  type: Recreate
   selector:
     matchLabels:
       app: jenkins-2-204-5

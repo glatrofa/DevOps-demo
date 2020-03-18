@@ -20,7 +20,9 @@ metadata:
   name: server-dp
   namespace: dev
 spec:
-  replicas: 2
+  replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: server-1-0
