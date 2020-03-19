@@ -41,5 +41,6 @@ spec:
               name: jenkins-persistent-storage                    
       volumes:
       - name: jenkins-persistent-storage
-        persistentVolumeClaim:
-          claimName: jenkins-pv-claim
+        emptyDir: {}
+        #persistentVolumeClaim:
+          #claimName: jenkins-pv-claim
