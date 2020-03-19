@@ -22,7 +22,7 @@ metadata:
 spec:
   replicas: 1
   strategy:
-  type: Recreate
+    type: Recreate
   selector:
     matchLabels:
       app: jenkins-2-204-5
@@ -33,6 +33,13 @@ spec:
     spec:
       containers:
       - name: jenkins-2-204-5-ctr
-        image: docker.io/jenkins/jenkins:2.204.5
+        image: jenkins/jenkins:2.204.5
         ports:
         - containerPort: 8080
+        volumeMounts:
+            - mountPath: "/var/jenkins_home"
+              name: jenkins-persistent-storage                    
+      volumes:
+      - name: jenkins-persistent-storage
+        persistentVolumeClaim:
+          claimName: jenkins-pv-claim
