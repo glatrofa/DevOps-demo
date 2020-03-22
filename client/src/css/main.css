@@ -1,0 +1,32 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*border: 2px solid dodgerblue;*/
+}
+
+section {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 29%;
+}    
+
+body.main {
+    text-align: center;
+}
+
+/*    
+footer {
+    display: block;
+}
+    
+nav {
+    display: block;
+}
+    
+nav li {
+    display: inline;
+}
+*/
