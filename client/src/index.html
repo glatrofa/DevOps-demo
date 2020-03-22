@@ -2,8 +2,95 @@
 <html>
     <head>
         <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="./css/main.css" media="all" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./js/index.js"></script>
+        <script>
+            /*
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+
+            function setUserInfo(){
+                var username = getUrlVars()["username"];
+                var email = getUrlVars()["email"];
+                if (username && email) document.getElementById("user_info").innerHTML = "<p>Username: "+ username +"Email: "+ email +"</p>";
+                else document.getElementById("user_info").innerHTML = "<h3>Accesso non eseguito</h3>";
+            }    
+            */
+            
+            /*
+            console.log("ciao");
+            function reqListener () { 
+                console.log(this.responseText); 
+            } 
+            var request = new XMLHttpRequest();
+            request.onload = function() {
+                console.log("pippo")    ;
+                console.log(this.responseText);
+            }
+            request.open("get", "http://localhost:30003/login.php", true);
+            */
+
+            /*
+            $.getJSON(
+                "http://localhost:30003/login.php",
+                function getUserInfo(data) {
+                    document.getElementById("user_info").innerHTML = "Username: "+ data[0].username +"Email: "+ data[0].email;
+                }
+            )
+            */
+
+            /*
+            $.post(
+                "http://localhost:30003/login.php",
+                function getUserInfo(data) {
+                    document.getElementById("user_info").innerHTML = "Username: "+ data[0].username +"Email: "+ data[0].email;
+                },
+                "json"
+            );
+            */
+
+            /*
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:30003/login.php",
+                dataType:"json",
+                headers: {
+                    a
+                },
+                success: function getUserInfo(data) {
+                    document.getElementById("user_info").innerHTML = "Username: "+ data[0].username +"Email: "+ data[0].email;
+                },
+                error:function(data){
+                    console.log("ERROR");
+                    console.log(data);
+                }            
+            });   
+            */ 
+        </script>
     </head>
-    <body>
-        <h1>Test completed!</h1>
-    </body>
+    <body class="main" onload="setUserInfo()">
+        <h2>Accedi per connetterti al database</h2>
+        <section>
+            <div id="user_info">                
+            </div>    
+        </section>
+        <aside>
+            <h2>Login</h2>
+            <form name="form_login" action="http://localhost:30003/login.php" method="POST">
+                <label>Username:</label>
+                <input type="text" id="username" name="username"> <br><br>
+                <label>Password:</label>
+                <input type="password" id="password" name="password"> <br><br>
+                <input type="submit" value="Sign in">
+                <input type="reset" value="Delete"> <br><br>                                
+            </form>
+            <button onclick="location.href = './html/register.html'">Sign up</button>
+        </aside>                  
+    </body>    
 </html>
