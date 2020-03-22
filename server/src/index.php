@@ -1,20 +1,14 @@
 <?php
-/*
-// Show all information, defaults to INFO_ALL
-phpinfo();
-// Show just the module information.
-// phpinfo(8) yields identical results.
-phpinfo(INFO_MODULES);
-*/
-echo "<h1>Test mysql db on k8s</h1>";
-$mysqli = new mysqli("10.108.69.30", "root", "code-architects", "test", 3306);
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
-echo $mysqli->host_info . "\n";
 
-$res = $mysqli->query("SELECT * FROM test");
+include 'db-info.php';
+
+echo $connection->host_info . "\n";
+
+/*
+$res = $connection->query("SELECT username, email FROM user");
 while ($row = $res->fetch_assoc()) {
-    echo "<br> Numero: " . $row['numero'] . "\n Nome: " . $row['nome'] . "\n";
+    echo "<br> Username: " . $row['username'] . "\n Email: " . $row['email'] . "\n";
 }
+*/
+
 ?>
