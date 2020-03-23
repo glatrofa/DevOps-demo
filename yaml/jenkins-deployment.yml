@@ -32,7 +32,10 @@ spec:
       containers:
       - name: jenkins-2-204-5-ctr
         #image: jenkins/jenkins:2.204.5
-        image: jenkins/jenkins:2.226-jdk11
+        #image: jenkins/jenkins:2.226-jdk11
+        image: fsilletti/jenkins-docker:0.0.1
+        securityContext:
+            runAsUser: 0
         ports:
         - containerPort: 8080
         volumeMounts:
