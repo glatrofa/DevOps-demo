@@ -6,7 +6,8 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  # without whit the pv works
+  #storageClassName: manual
   capacity:
     storage: 5Gi
   accessModes:
@@ -20,7 +21,8 @@ metadata:
   name: mysql-pv-claim
   namespace: dev
 spec:
-  storageClassName: manual
+  #without whit the pv works
+  #storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
