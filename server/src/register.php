@@ -1,8 +1,7 @@
 <?php
 
-include 'db-info.php';
+include 'db-connetion.php';
 
-echo "<html>";
 $username = mysqli_real_escape_string($connection, $_POST["username"]);
 $password = mysqli_real_escape_string($connection, $_POST["password"]);
 $password_criptata = md5($password);
@@ -19,13 +18,9 @@ if($nrighe == 0){
     mysqli_query($connection, $query) or die(mysqli_error($connection));
     $queryU = "UNLOCK TABLES";
     mysqli_query($connection, $queryU) or die (mysqli_error($connection));       
-    echo "<head><meta http-equiv='refresh' content='2; URL=http://localhost:30002/index.html' /></head><body>";
-    echo "<strong>Registrazione eseguita!</strong> <br> Verrai reindirizzato a breve...";
 }
 else{
-    echo "<head><meta http-equiv='refresh' content='2; URL=http://localhost:30002/html/register.html' /></head><body>";
-    echo "<strong>Utente già registrato!</strong> <br> Verrai reindirizzato a breve...";
+
 }
-echo "</body></html>";
 
 ?>
