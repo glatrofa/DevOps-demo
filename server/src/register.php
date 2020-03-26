@@ -20,7 +20,7 @@ if($nrighe == 0){
     mysqli_query($connection, $queryU) or die (mysqli_error($connection));       
 }
 else{
-
+    // controllo email e/o username già presenti
 }
 
 ?>
