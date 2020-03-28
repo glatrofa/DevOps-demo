@@ -1,6 +1,46 @@
+html,
+body {
+  height: 100%;
+}
+
+h1,
+small {
+  color: white;
+}
+
+header {
+  height: 60px;
+  padding: 5px;
+  background: #1abc9c;
+}
+main {
+  height: calc(100% - 100px);
+}
+
+.container {
+  height: 100%;
+  background: #ecf0f1;  
+}
+
+footer {
+  background: #16a085;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.button-padding {
+    padding: 1em;
+}
+
+/*
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /*border: 2px solid dodgerblue;*/
+    /*border: 2px solid dodgerblue;
 }
 
 section {
@@ -17,7 +57,7 @@ body.main {
     text-align: center;
 }
 
-/*    
+   
 footer {
     display: block;
 }
