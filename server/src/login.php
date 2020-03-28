@@ -1,7 +1,7 @@
 <?php
 
 header('Access-Control-Allow-Origin: *'); // resolve the "Cross-Origin Read Blocking (CORB)" error
-include 'db-connetion.php';
+include 'db-connection.php';
 
 $username = mysqli_real_escape_string($connection, $_POST["username"]);
 $password = mysqli_real_escape_string($connection, $_POST["password"]);
