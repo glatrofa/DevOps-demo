@@ -1,7 +1,5 @@
 /*
-$(document).ready(function () {
-
-});
+$(document).ready(function () {});
 */
 
 function registerRedirect () {
@@ -22,9 +20,10 @@ $(function showUserInfo() {
         success: function (data) {
             if(data[0].username != null && data[0].email != null)
               var string = '<div class="alert alert-success" role="alert">'+'<h5>Login done!</h5>'+'Username: '+ data[0].username +'<br>Email: '+ data[0].email+'</div>';
-            else
-              var string = '<div class="alert alert-warning" role="alert">'+'<h5>Your account does not exist</h5>'+'</div>';    
-            document.getElementById('user-info').innerHTML = string + register_button;        
+            else{
+              var string = '<div class="alert alert-warning" role="alert">'+'<h5>Your account does not exist</h5>'+'</div>';
+              document.getElementById('user-info').innerHTML = string + register_button;
+            }               
         },
         error: function () {
             alert('Error');
