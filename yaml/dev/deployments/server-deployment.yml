@@ -32,7 +32,7 @@ spec:
         app: server-1-0
     spec:
       containers:
-      - name: server-1-0-ctr
+      - name: server-1-1-ctr
         image: glatrofa/dev-ops-demo:server-1.1
         ports:
         - containerPort: 80
