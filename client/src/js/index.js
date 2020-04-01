@@ -6,7 +6,7 @@ function registerRedirect () {
   location.href = "./html/register.html";
 }
 
-var register_button = "<div class='centered button-padding'><button class='btn btn-light' onclick='registerRedirect()'>Sign up TEST</button></div>";
+var register_button = "<div class='centered button-padding'><button class='btn btn-light' onclick='registerRedirect()'>Sign up</button></div>";
 
 $(function showUserInfo() {
     $('form').on('submit', function (e) {
