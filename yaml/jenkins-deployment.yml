@@ -41,8 +41,13 @@ spec:
         volumeMounts:
             - mountPath: "/var/jenkins_home"
               name: jenkins-persistent-storage
+            - name: dockersock
+              mountPath: "/var/run/docker.sock"
       volumes:
       - name: jenkins-persistent-storage
         emptyDir: {}
+      - name: dockersock
+        hostPath:
+          path: /var/run/docker.sock
         #persistentVolumeClaim:
           #claimName: jenkins-pv-claim
