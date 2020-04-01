@@ -40,7 +40,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
             - mountPath: "/var/jenkins_home"
-              name: jenkins-persistent-storage                    
+              name: jenkins-persistent-storage
       volumes:
       - name: jenkins-persistent-storage
         emptyDir: {}
