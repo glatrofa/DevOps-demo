@@ -34,5 +34,6 @@ spec:
       containers:
       - name: server-1-1-ctr
         image: glatrofa/dev-ops-demo:server-1.1
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 80
