@@ -9,6 +9,8 @@ $password_criptata = md5($password);
 
 $query = "SELECT username, email FROM user WHERE username = '".$username."' AND password = '".$password_criptata."'";
 $result = mysqli_query($connection, $query) or die("Access failed");
+echo $connection;
+echo $result;
 $rowsNumber = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $response = array();
