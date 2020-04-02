@@ -20,7 +20,7 @@ metadata:
   name: client-dp
   namespace: dev
   annotations:
-    kubernetes.io/change-cause: "image updated to 1.2"
+    kubernetes.io/change-cause: "image updated to 1.3"
 spec:
   replicas: 1
   minReadySeconds: 1
@@ -38,7 +38,7 @@ spec:
         app: client-1-0
     spec:
       containers:
-      - name: client-1-2-ctr-pippo
+      - name: client-1-3-ctr
         image: glatrofa/dev-ops-demo:client-1.2
         imagePullPolicy: Always
         ports:
