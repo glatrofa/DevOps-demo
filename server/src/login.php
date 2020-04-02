@@ -1,6 +1,5 @@
 <?php
 
-echo "ciao";
 header('Access-Control-Allow-Origin: *'); // resolve the "Cross-Origin Read Blocking (CORB)" error
 include 'db-connection.php';
 
@@ -10,8 +9,6 @@ $password_criptata = md5($password);
 
 $query = "SELECT username, email FROM user WHERE username = '".$username."' AND password = '".$password_criptata."'";
 $result = mysqli_query($connection, $query) or die("Access failed");
-echo $connection;
-echo $result;
 $rowsNumber = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $response = array();
