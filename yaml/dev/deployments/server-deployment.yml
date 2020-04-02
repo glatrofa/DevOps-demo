@@ -39,7 +39,7 @@ spec:
         app: server-1-0
     spec:
       containers:
-      - name: ${SERVER_NAME}:${SERVER_VERSION} #server-1-2-ctr
+      - name: ${SERVER_NAME}${SERVER_VERSION} #server-1-2-ctr
         image: glatrofa/dev-ops-demo:server-1.2
         imagePullPolicy: Always
         ports:
