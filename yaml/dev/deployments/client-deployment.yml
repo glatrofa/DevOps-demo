@@ -40,6 +40,6 @@ spec:
       containers:
       - name: client-1-2-ctr
         image: glatrofa/dev-ops-demo:client-1.2
-        imagePullPolicy: Always
+        ImagePullPolicy: Always
         ports:
         - containerPort: 80
