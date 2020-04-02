@@ -22,7 +22,6 @@ metadata:
   #annotations:
     #kubernetes.io/change-cause: "image updated to 1.2"
 spec:
-  tag: 1.2
   replicas: 1
   minReadySeconds: 1
   strategy:
