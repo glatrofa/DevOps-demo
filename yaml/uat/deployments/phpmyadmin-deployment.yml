@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpmyadmin-svc
+  namespace: uat
+  labels:
+    app: phpmyadmin-5
+spec:
+  type: NodePort
+  selector:
+    app: phpmyadmin-5
+  ports:
+  - port: 80
+    nodePort: 30005
+    protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin-dp
+  namespace: dev
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: phpmyadmin-5
+  template:
+    metadata:
+      labels:
+        app: phpmyadmin-5
+    spec:
+      containers:
+        - image: phpmyadmin/phpmyadmin:5
+          name: phpmyadmin-5-ctr          
+          env:
+            - name: PMA_HOST
+              value: mysql-svc
+            - name: PMA_PORT
+              value: "3306"
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secrets
+                  key: ROOT_PASSWORD
+          ports:
+            - containerPort: 80
