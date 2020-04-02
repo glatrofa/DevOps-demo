@@ -39,7 +39,7 @@ spec:
         app: client-1-0
     spec:
       containers:
-      - name: client-1-2-ctr
+      - name: client-1-2-ctr-pippo
         image: glatrofa/dev-ops-demo:client-1.2
         imagePullPolicy: Always
         ports:
