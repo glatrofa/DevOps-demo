@@ -21,7 +21,7 @@ metadata:
   namespace: dev
   annotations:
     #kubernetes.io/change-cause: "image updated to 1.4"
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
 spec:
   replicas: 1
   minReadySeconds: 1
