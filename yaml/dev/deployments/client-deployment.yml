@@ -38,7 +38,7 @@ spec:
         app: client-1-0
     spec:
       containers:
-      - name: client-1-3-ctr
+      - name: client-1-4-ctr
         image: glatrofa/dev-ops-demo:client-1.2
         imagePullPolicy: Always
         ports:
