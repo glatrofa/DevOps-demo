@@ -1,5 +1,6 @@
 <?php
 
+echo "ciao";
 header('Access-Control-Allow-Origin: *'); // resolve the "Cross-Origin Read Blocking (CORB)" error
 include 'db-connection.php';
 
