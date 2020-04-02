@@ -23,6 +23,7 @@ metadata:
     #kubernetes.io/change-cause: "image updated to 1.2"
 spec:
   replicas: 1
+  minReadySeconds: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
