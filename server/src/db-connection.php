@@ -2,7 +2,7 @@
 
 $dbPassword = "code-architects";
 $dbUserName = "root";
-$dbServer = "10.96.245.98";
+$dbServer = "10.96.87.199";
 $dbName = "user";
 $port = 3306;
 
