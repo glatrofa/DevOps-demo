@@ -11,7 +11,7 @@ spec:
     app: mysql-8-0
   ports:
   - port: 3306
-    nodePort: 30004
+    nodePort: 30304
     protocol: TCP
 ---
 apiVersion: apps/v1

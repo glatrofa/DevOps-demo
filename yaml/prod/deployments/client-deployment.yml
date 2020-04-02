@@ -11,7 +11,7 @@ spec:
     app: client-1-0
   ports:
   - port: 80
-    nodePort: 30002
+    nodePort: 30302
     protocol: TCP
 ---
 apiVersion: apps/v1
@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: client-ctr-${CLIENT_VERSION}
-        image: glatrofa/dev-ops-demo:client-1.2
+        image: glatrofa/dev-ops-demo:client-${CLIENT_IMAGE_VERSION}
         imagePullPolicy: Always
         ports:
         - containerPort: 80

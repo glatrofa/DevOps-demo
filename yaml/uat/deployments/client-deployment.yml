@@ -11,7 +11,7 @@ spec:
     app: client-1-0
   ports:
   - port: 80
-    nodePort: 30002
+    nodePort: 30202
     protocol: TCP
 ---
 apiVersion: apps/v1

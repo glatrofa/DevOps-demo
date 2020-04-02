@@ -11,7 +11,7 @@ spec:
     app: phpmyadmin-5
   ports:
   - port: 80
-    nodePort: 30005
+    nodePort: 30205
     protocol: TCP
 ---
 apiVersion: apps/v1
