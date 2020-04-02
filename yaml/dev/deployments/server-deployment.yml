@@ -19,8 +19,7 @@ kind: Deployment
 metadata:
   name: server-dp
   namespace: dev
-  annotations:
-    kubernetes.io/change-cause="image updated to 1.2"
+  kubernetes.io/change-cause: image updated to 1.2
 spec:
   replicas: 1
   strategy:
