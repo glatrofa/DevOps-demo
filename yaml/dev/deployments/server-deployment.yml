@@ -20,8 +20,8 @@ metadata:
   name: server-dp
   namespace: dev
   annotations:
-    #kubernetes.io/change-cause: "image updated to 1.4"
-    deployment.kubernetes.io/revision: "2"
+    kubernetes.io/change-cause: "image name as a parameter"
+    #deployment.kubernetes.io/revision: "2"
 spec:
   replicas: 1
   minReadySeconds: 1
@@ -39,7 +39,7 @@ spec:
         app: server-1-0
     spec:
       containers:
-      - name: server-1-2-ctr
+      - name: ${SERVER-NAME} #server-1-2-ctr
         image: glatrofa/dev-ops-demo:server-1.2
         imagePullPolicy: Always
         ports:
