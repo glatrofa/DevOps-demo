@@ -39,7 +39,7 @@ spec:
         app: client
     spec:
       containers:
-      - name: client-ctr-${VERSION}
+      - name: client-ctr
         image: glatrofa/dev-ops-demo:client-${VERSION}
         imagePullPolicy: Always
         ports:
