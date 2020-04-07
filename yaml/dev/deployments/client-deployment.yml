@@ -39,8 +39,8 @@ spec:
         app: client-1-0
     spec:
       containers:
-      - name: client-ctr-${CLIENT_VERSION}
-        image: glatrofa/dev-ops-demo:client-1.2
+      - name: client-ctr-${VERSION}
+        image: glatrofa/dev-ops-demo:client-${VERSION}
         imagePullPolicy: Always
         ports:
         - containerPort: 80

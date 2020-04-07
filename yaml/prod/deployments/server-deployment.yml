@@ -39,8 +39,8 @@ spec:
         app: server-1-0
     spec:
       containers:
-      - name: server-ctr-${SERVER_VERSION}
-        image: glatrofa/dev-ops-demo:server-${SERVER_IMAGE_VERSION}
+      - name: server-ctr-${VERSION}
+        image: glatrofa/dev-ops-demo:server-${VERSION}
         imagePullPolicy: Always
         ports:
         - containerPort: 80
