@@ -4,11 +4,11 @@ metadata:
   name: client-svc
   namespace: uat
   labels:
-    app: client-${VERSION}
+    app: client
 spec:
   type: NodePort
   selector:
-    app: client-${VERSION}
+    app: client
   ports:
   - port: 80
     nodePort: 30202
@@ -32,11 +32,11 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      app: client-${VERSION}
+      app: client
   template:
     metadata:
       labels:
-        app: client-${VERSION}
+        app: client
     spec:
       containers:
       - name: client-ctr-${VERSION}

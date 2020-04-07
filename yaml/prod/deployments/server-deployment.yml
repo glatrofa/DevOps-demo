@@ -4,11 +4,11 @@ metadata:
   name: server-svc  
   namespace: prod
   labels:
-    app: server-${VERSION}
+    app: server
 spec:
   type: NodePort
   selector:
-    app: server-${VERSION}
+    app: server
   ports:
   - port: 80
     nodePort: 30303
@@ -32,11 +32,11 @@ spec:
       maxSurge: 100%
   selector:
     matchLabels:
-      app: server-${VERSION}
+      app: server
   template:
     metadata:
       labels:
-        app: server-${VERSION}
+        app: server
     spec:
       containers:
       - name: server-ctr-${VERSION}
