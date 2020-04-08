@@ -5,7 +5,6 @@ $(function registerUser() {
       e.preventDefault();
       $.ajax({
         type: 'POST',
-        //url: 'http://localhost:30103/register.php',
         url: API+'login.php',
         crossOrigin: true,
         data: $(this).serialize(),

@@ -1,7 +1,3 @@
-/*
-$(document).ready(function () {});
-*/
-
 import {API} from "./config/config";
 
 function registerRedirect () {
@@ -15,7 +11,6 @@ $(function showUserInfo() {
       e.preventDefault();
       $.ajax({
         type: 'POST',
-        //url: 'http://localhost:30103/login.php',
         url: API+'login.php',
         crossOrigin: true,
         data: $(this).serialize(),

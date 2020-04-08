@@ -1,11 +1,5 @@
 <?php
 
-/*
-$dbPassword = "code-architects";
-$dbUserName = "root";
-$dbServer = "10.105.26.205";
-$dbName = "user";
-*/
 $dbPassword = getenv('DB_PASSWORD');
 $dbUserName = getenv('DB_USER_NAME');
 $dbServer = getenv('SERVER_ADDRESS');
