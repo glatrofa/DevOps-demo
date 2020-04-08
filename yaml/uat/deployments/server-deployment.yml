@@ -42,5 +42,14 @@ spec:
       - name: server-ctr
         image: glatrofa/dev-ops-demo:server-${VERSION}
         imagePullPolicy: Always
+        env:
+          - name: DB_PASSWORD
+            value: "code-architects"
+          - name: DB_USER_NAME
+            value: "root"
+          - name: SERVER_ADDRESS
+            value: "10.111.219.146"
+          - name: DB_NAME
+            value: "user"
         ports:
         - containerPort: 80
