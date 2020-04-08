@@ -42,5 +42,12 @@ spec:
       - name: client-ctr
         image: glatrofa/dev-ops-demo:client-${VERSION}
         imagePullPolicy: Always
+        volumeMounts:
+        - name: prod-config
+          mountPath: "/usr/local/apache2/htdocs/js/config"
         ports:
         - containerPort: 80
+      volumes:
+      - name: prod-config
+        configMap:
+          name: prod-configmap

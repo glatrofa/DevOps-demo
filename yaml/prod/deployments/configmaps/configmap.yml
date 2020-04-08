@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prod-configmap
+  namespace: prod
+data:
+  config.js: "const API = 'http://localhost:30303/';"
