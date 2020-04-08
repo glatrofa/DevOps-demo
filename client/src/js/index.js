@@ -1,4 +1,4 @@
-import {API} from "./config/config";
+import {API} from "./config/config.js";
 
 function registerRedirect () {
   location.href = "./html/register.html";
