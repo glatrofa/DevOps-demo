@@ -42,5 +42,12 @@ spec:
       - name: client-ctr
         image: glatrofa/dev-ops-demo:client-${VERSION}
         imagePullPolicy: Always
+        volumeMounts:
+        - name: dev-config
+          mounthPath: /etc/config
         ports:
         - containerPort: 80
+      volumes:
+      - name: dev-config
+        configMap:
+          name: dev-configmap
