@@ -1,9 +1,12 @@
+import {API} from "./config/config";
+
 $(function registerUser() {
     $('form').on('submit', function (e) {
       e.preventDefault();
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:30103/register.php',
+        //url: 'http://localhost:30103/register.php',
+        url: API+'login.php',
         crossOrigin: true,
         data: $(this).serialize(),
         dataType: 'json',

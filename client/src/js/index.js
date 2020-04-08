@@ -2,6 +2,8 @@
 $(document).ready(function () {});
 */
 
+import {API} from "./config/config";
+
 function registerRedirect () {
   location.href = "./html/register.html";
 }
@@ -13,7 +15,8 @@ $(function showUserInfo() {
       e.preventDefault();
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:30103/login.php',
+        //url: 'http://localhost:30103/login.php',
+        url: API+'login.php',
         crossOrigin: true,
         data: $(this).serialize(),
         dataType: 'json',
