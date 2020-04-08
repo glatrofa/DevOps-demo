@@ -1,4 +1,4 @@
-import {API} from "./config/config.js";
+import {API} from "./config/config";
 
 $(function registerUser() {
     $('form').on('submit', function (e) {
