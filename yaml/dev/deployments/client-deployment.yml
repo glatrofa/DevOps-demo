@@ -44,7 +44,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: dev-config
-          mounthPath: /etc/config
+          mounthPath: "/etc/config"
         ports:
         - containerPort: 80
       volumes:
