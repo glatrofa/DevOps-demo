@@ -13,7 +13,7 @@ $(function showUserInfo() {
       e.preventDefault();
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:30003/login.php',
+        url: 'http://localhost:30103/login.php',
         crossOrigin: true,
         data: $(this).serialize(),
         dataType: 'json',

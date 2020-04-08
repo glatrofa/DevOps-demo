@@ -3,7 +3,7 @@ $(function registerUser() {
       e.preventDefault();
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:30003/register.php',
+        url: 'http://localhost:30103/register.php',
         crossOrigin: true,
         data: $(this).serialize(),
         dataType: 'json',
