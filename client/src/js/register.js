@@ -8,6 +8,7 @@ $(function registerUser() {
         data: $(this).serialize(),
         dataType: 'json',
         success: function (data) {
+            console.log(data);
             var url = '../index.html';
             switch (data[0]) {
                 case 0:
@@ -27,8 +28,9 @@ $(function registerUser() {
             }, 2000);     
             document.getElementById('user-info').innerHTML = string;        
         },
-        error: function () {
+        error: function (data) {
             alert('Error');
+            console.log(data);
         }
       });
     });
