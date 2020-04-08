@@ -44,7 +44,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: dev-config
-          mountPath: "htdocs/js"
+          mountPath: "/etc/config"
         ports:
         - containerPort: 80
       volumes:
