@@ -4,4 +4,4 @@ metadata:
   name: dev-configmap
   namespace: dev
 data:
-  config.js: "const API = 'http://localhost:30103/';"
+  config: "const API = 'http://localhost:30103/';"
