@@ -4,4 +4,4 @@ metadata:
   name: prod-configmap
   namespace: prod
 data:
-  config.js: "export const API = 'http://localhost:30303/';"
+  config.js: "const API = 'http://localhost:30303/'; export { API };"

@@ -4,4 +4,4 @@ metadata:
   name: uat-configmap
   namespace: uat
 data:
-  config.js: "export const API = 'http://localhost:30203/';"
+  config.js: "const API = 'http://localhost:30203/'; export { API };"
