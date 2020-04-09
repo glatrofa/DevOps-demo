@@ -1,10 +1,10 @@
 import { API } from "./config/config.js";
 
+const register_button = "<div class='centered button-padding'><button class='btn btn-light' id='register'>Sign up</button></div>";
+
 document.getElementById('register').onclick = function () {
   location.href = "./html/register.html";
 };
-
-var register_button = "<div class='centered button-padding'><button class='btn btn-light' id='register'>Sign up</button></div>";
 
 $(function showUserInfo() {
     $('form').on('submit', function (e) {
