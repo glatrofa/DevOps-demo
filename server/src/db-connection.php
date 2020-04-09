@@ -14,7 +14,7 @@ if(!isset($dbName))
     $dbName = "user";
 $port = getenv('PORT_NUMBER');
 if(!isset($port))
-    $port = "3306";
+    $port = 3306;
 
 $connection = new mysqli($dbServer, $dbUserName, $dbPassword, $dbName, $port);
 if($connection->connect_errno){
