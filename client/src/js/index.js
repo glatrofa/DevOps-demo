@@ -1,7 +1,5 @@
 import { API } from "./config/config.js";
 
-const register_button = "<div class='centered button-padding'><button class='btn btn-light' id='register'>Sign up</button></div>";
-
 document.getElementById('register').onclick = function () {
   location.href = "./html/register.html";
 };
@@ -23,6 +21,7 @@ $(function showUserInfo() {
             }
             else{
               var string = '<div class="alert alert-warning" role="alert">'+'<h5>Your account does not exist</h5>'+'</div>';
+              var register_button = "<div class='centered button-padding'><button class='btn btn-light' id='register'>Sign up</button></div>";
               document.getElementById('user-info').innerHTML = string + register_button;
             }               
         },
