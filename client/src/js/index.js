@@ -1,8 +1,10 @@
 import { API } from "./config/config.js";
 
-document.getElementById('register').onclick = function () {
-  location.href = "./html/register.html";
-};
+$(document).ready(function () {
+  document.getElementById('register').onclick = function () {
+    location.href = "./html/register.html";
+  };
+});
 
 $(function showUserInfo() {
     $('form').on('submit', function (e) {
