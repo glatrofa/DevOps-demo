@@ -51,5 +51,7 @@ spec:
             value: "10.111.219.146"
           - name: DB_NAME
             value: "user"
+          - name: PORT_NUMBER
+            value: "3306"
         ports:
         - containerPort: 80
