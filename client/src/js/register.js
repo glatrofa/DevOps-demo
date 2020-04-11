@@ -11,19 +11,22 @@ $(function registerUser() {
         dataType: 'json',
         success: function (data) {
             console.log(data);
-            let url = '../index.html';
+            let url = '../index.html', string;
             switch (data[0]) {
                 case 0:
-                    let string = '<div class="alert alert-success" role="alert">'+'<h5>Registration successful!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
+                    string = '<div class="alert alert-success" role="alert">'+'<h5>Registration successful!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
                     break;
                 case 1:
-                    let string = '<div class="alert alert-warning" role="alert">'+'<h5>Email already used!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
+                    string = '<div class="alert alert-warning" role="alert">'+'<h5>Email already used!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
                     url = './register.html';
                     break;
                 case 2:      
-                    let string = '<div class="alert alert-warning" role="alert">'+'<h5>Username already used!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
+                    string = '<div class="alert alert-warning" role="alert">'+'<h5>Username already used!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
                     url = './register.html';
-                    break;              
+                    break;     
+                default:
+                    string = '<div class="alert alert-warning" role="alert">'+'<h5>Error!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
+                    url = './register.html';
             }         
             setTimeout(function () {
                 window.location.href = url;
