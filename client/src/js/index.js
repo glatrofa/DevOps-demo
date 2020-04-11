@@ -23,7 +23,7 @@ $(function showUserInfo() {
               let string = '<div class="alert alert-warning" role="alert">'+'<h5>Incorrect credentials!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
               document.getElementById('user-info').innerHTML = string;
               setTimeout(function () {
-                window.location.href = "./html/register.html";
+                window.location.href = ".";
               }, 2000);
             }               
         },
