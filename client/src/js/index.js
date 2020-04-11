@@ -1,6 +1,8 @@
 import { API } from "./config/config.js";
 
-document.getElementById('register-button').onclick = function signUpClicked() {
+document.getElementById('register-button').onclick = signUpClicked();
+
+function signUpClicked() {
   window.location.href = "./html/register.html";
 };
 
