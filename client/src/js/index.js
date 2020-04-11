@@ -4,6 +4,10 @@ document.getElementById('register-button').onclick = function () {
   window.location.href = "./html/register.html";
 };
 
+document.getElementById('register-button-second').onclick = function () {
+  window.location.href = "./html/register.html";
+};
+
 $(function showUserInfo() {
     $('form').on('submit', function (e) {
       e.preventDefault();
@@ -20,8 +24,8 @@ $(function showUserInfo() {
               document.getElementById('user-info').innerHTML = string;
             }
             else{
-              let string = '<div class="alert alert-warning" role="alert">'+'<h5>Your account does not exist</h5>'+'</div>';
-              let register_button = "<div class='centered button-padding'><button class='btn btn-light' id='register-button'>Sign up</button></div>";
+              let string = '<div class="alert alert-warning" role="alert">'+'<h5>Incorrect credentials!</h5>'+'</div>';
+              let register_button = "<div class='centered button-padding'><button class='btn btn-light' id='register-button-second'>Sign up</button></div>";
               document.getElementById('user-info').innerHTML = string + register_button;
             }               
         },
