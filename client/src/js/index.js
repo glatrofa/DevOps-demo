@@ -1,8 +1,6 @@
 import { API } from "./config/config.js";
 
-//document.getElementById('register-button').onclick = signUpClicked();
-
-function signUpClicked() {
+document.getElementById('register-button').onclick = function () {
   window.location.href = "./html/register.html";
 };
 
@@ -22,9 +20,11 @@ $(function showUserInfo() {
               document.getElementById('user-info').innerHTML = string;
             }
             else{
-              let string = '<div class="alert alert-warning" role="alert">'+'<h5>Incorrect credentials!</h5>'+'</div>';
-              let register_button = '<div class="centered button-padding">'+'<button class="btn btn-light" id="register-button" onclick="signUpClicked()">Sign up</button>'+'</div>';
-              document.getElementById('user-info').innerHTML = string + register_button;
+              let string = '<div class="alert alert-warning" role="alert">'+'<h5>Incorrect credentials!</h5>'+'<p>You will be redirected in 2 seconds...</p></div>';
+              document.getElementById('user-info').innerHTML = string;
+              setTimeout(function () {
+                window.location.href = "./html/register.html";
+              }, 2000);
             }               
         },
         error: function (data) {
