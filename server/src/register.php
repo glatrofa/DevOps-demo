@@ -2,11 +2,12 @@
 
 header('Access-Control-Allow-Origin: *');
 include 'db-connection.php';
+include 'trim-function.php';
 
-$username = mysqli_real_escape_string($connection, $_POST["username"]);
+$username = trimString(mysqli_real_escape_string($connection, $_POST["username"]));
 $password = mysqli_real_escape_string($connection, $_POST["password"]);
 $password_criptata = md5($password);
-$email = mysqli_real_escape_string($connection, $_POST["email"]);
+$email = trimString(mysqli_real_escape_string($connection, $_POST["email"]));
 
 $query = "SELECT email FROM user WHERE email = '".$email."'";
 $result = mysqli_query($connection, $query) or die("Access failed");
