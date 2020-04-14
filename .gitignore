@@ -1,0 +1,10 @@
+# exclude PHPUnit files
+vendor/
+composer.json
+composer.lock
+# exclude php files
+php-7.4.4-Win32-vc15-x64
+# exclude composer exe
+Composer-Setup.exe
+# exclude powershell scripts
+ps-scripts/
