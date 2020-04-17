@@ -1,0 +1,5 @@
+FROM phpunit/phpunit
+WORKDIR src
+COPY ./server/src/ .
+RUN chmod +x /usr/local/bin/phpunit
+CMD ["phpunit", "./test/TrimFunctionTest.php"]
