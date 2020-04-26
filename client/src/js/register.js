@@ -1,7 +1,7 @@
 import { API } from "./config/config.js";
 
 document.getElementById('main-title').onclick = function () {
-    window.location.href = ".";
+    window.location.href = "./register.html";
   };
 
 $(function registerUser() {
