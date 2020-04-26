@@ -1,5 +1,9 @@
 import { API } from "./config/config.js";
 
+document.getElementById('main-title').onclick = function () {
+    window.location.href = ".";
+  };
+
 $(function registerUser() {
     $('form').on('submit', function (e) {
       e.preventDefault();

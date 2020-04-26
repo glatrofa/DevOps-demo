@@ -4,6 +4,10 @@ document.getElementById('register-button').onclick = function () {
   window.location.href = "./html/register.html";
 };
 
+document.getElementById('main-title').onclick = function () {
+  window.location.href = ".";
+};
+
 $(function showUserInfo() {
     $('form').on('submit', function (e) {
       e.preventDefault();
